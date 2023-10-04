@@ -1,3 +1,8 @@
 {
-  "default": {}
+  "default": {
+    "liblemon": {
+      "baseline": "6b9da5c",
+      "port-version": 0
+    }
+  }
 }
