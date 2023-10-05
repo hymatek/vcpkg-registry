@@ -1,17 +1,11 @@
 vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 
-set(VERSION ed2c21cbd6ef)
-
-vcpkg_download_distfile(ARCHIVE
-    URLS "http://lemon.cs.elte.hu/hg/lemon/archive/${VERSION}.zip"
-    FILENAME "lemon-${VERSION}.zip"
-    SHA512 029640e4f791a18068cb2e2b4e794d09822d9d56fb957eb3e2cceae3a30065c0041a31c465637cfcadf7b2473564070b34adc88513439cdf9046831854e2aa70
-)
-
-vcpkg_extract_source_archive(
-    SOURCE_PATH
-    ARCHIVE "${ARCHIVE}"
-    SOURCE_BASE "${VERSION}"
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO hymatek/lemon
+    REF main
+    SHA512 bfcfd680fbe1047b377792189234c049cd0a7497db563983505509ed4beb8ed31ffd9e68b22f92ef5e736ac6a883329c5360a65ac0d4a0f99deb9980fad22108
+    HEAD_REF main
     PATCHES
         cmake.patch
         fixup-targets.patch

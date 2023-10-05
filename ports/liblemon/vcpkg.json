@@ -1,7 +1,6 @@
 {
   "name": "liblemon",
-  "version-date": "2019-06-13",
-  "port-version": 6,
+  "version-string": "6b9da5c",
   "description": "Library for Efficient Modeling and Optimization in Networks",
   "homepage": "https://lemon.cs.elte.hu/trac/lemon",
   "dependencies": [
